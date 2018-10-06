@@ -10,6 +10,11 @@ print([m.name for m in op]) #print the name of operations
 print([m.values() for m in op]) #print the tensor produced by these operations
 ```
 
+## List all tensors in a graph
+```python
+print([n.name for n in tf.get_default_graph().as_graph_def().node])
+```
+
 ## Specify which GPU to use
 ```python
 import os
