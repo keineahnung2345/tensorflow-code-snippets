@@ -20,9 +20,14 @@ print([n.name for n in tf.get_default_graph().as_graph_def().node])
 <your-tensor>.op
 ```
 
-## Find out the operands that by some operation building up this tensor
+## Find out the operands that builds up this tensor
 ```python
 <your-tensor>.op.inputs
+```
+
+## Check how many operands building up this tensor
+```python
+<your-tensor>.op.inputs.__len__()
 ```
 
 ## Specify which GPU to use
