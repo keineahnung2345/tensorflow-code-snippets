@@ -15,6 +15,16 @@ print([m.values() for m in op]) #print the tensor produced by these operations
 print([n.name for n in tf.get_default_graph().as_graph_def().node])
 ```
 
+## Find out the operation that generates this tensor
+```python
+<your-tensor>.op
+```
+
+## Find out the operands that by some operation building up this tensor
+```python
+<your-tensor>.op.inputs
+```
+
 ## Specify which GPU to use
 ```python
 import os
