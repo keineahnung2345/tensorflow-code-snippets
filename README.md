@@ -6,7 +6,8 @@ Some useful tensorflow code snippets
 import tensorflow as tf
 sess = tf.Session()
 op = sess.graph.get_operations()
-print([m.values() for m in op])
+print([m.name for m in op]) #print the name of operations
+print([m.values() for m in op]) #print the tensor produced by these operations
 ```
 
 ## Specify which GPU to use
