@@ -52,6 +52,17 @@ def get_session(gpu_fraction=0.333):
 ktf.set_session(get_session())
 ```
 
+## keras: show all layers of a model
+```python
+model.layers
+```
+
+## keras: get layer of a model
+```python
+model.get_layer(<"layer-name">)
+model.get_layer(index=<layer-index>)
+```
+
 ## command line: open tensorboard on your-host-ip:6006
 ```sh
 tensorboard --logdir=<your-log-dir>
