@@ -17,6 +17,12 @@ os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0" #"-1" for not using GPU
 ```
 
+## Clear session, destroy the current graph and create a new one
+```python
+import tensorflow as tf
+tf.keras.backend.clear_session()
+```
+
 ## keras: specify the proportion of GPU to use
 ```python
 import tensorflow as tf
