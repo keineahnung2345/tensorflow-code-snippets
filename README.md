@@ -30,3 +30,8 @@ def get_session(gpu_fraction=0.333):
 
 ktf.set_session(get_session())
 ```
+
+## command line: open tensorboard on your-host-ip:6006
+```sh
+tensorboard --logdir=<your-log-dir>
+```
