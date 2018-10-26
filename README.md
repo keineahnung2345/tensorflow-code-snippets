@@ -30,6 +30,11 @@ print([n.name for n in tf.get_default_graph().as_graph_def().node])
 <your-tensor>.op.inputs.__len__()
 ```
 
+## Zero out some entries of tensor x according to a boolean mask
+```python
+x = tf.where(mask, x, tf.zeros_like(x))
+```
+
 ## Specify which GPU to use
 ```python
 import os
