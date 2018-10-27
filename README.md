@@ -15,6 +15,11 @@ print([m.values() for m in op]) #print the tensor produced by these operations
 print([n.name for n in tf.get_default_graph().as_graph_def().node])
 ```
 
+## Get tensor by name
+```python
+tf.get_default_graph().get_tensor_by_name("<your-tensor-name>:0")
+```
+
 ## Find out the operation that generates this tensor
 ```python
 <your-tensor>.op
