@@ -40,6 +40,17 @@ tf.get_default_graph().get_tensor_by_name("<your-tensor-name>:0")
 x = tf.where(mask, x, tf.zeros_like(x))
 ```
 
+## Get visible GPUs
+```python
+from tensorflow.python.client import device_lib
+
+def get_available_gpus():
+    local_device_protos = device_lib.list_local_devices()
+    return [x.name for x in local_device_protos if x.device_type == 'GPU']
+
+get_available_gpus()
+```
+
 ## Specify which GPU to use
 ```python
 import os
