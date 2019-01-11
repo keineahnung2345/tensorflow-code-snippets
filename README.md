@@ -51,6 +51,12 @@ def get_available_gpus():
 get_available_gpus()
 ```
 
+## keras: Get visible GPUs
+```python
+from keras import backend as K
+K.tensorflow_backend._get_available_gpus()
+```
+
 ## Specify which GPU to use
 ```python
 import os
