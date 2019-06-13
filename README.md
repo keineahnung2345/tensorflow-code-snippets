@@ -96,6 +96,11 @@ model.get_layer(index=<layer-index>)
 ```
 
 ## command line: open tensorboard on your-host-ip:6006
+To use tensorboard with PyTorch, first:
 ```sh
-tensorboard --logdir=<your-log-dir>
+pip install tensorflow tensorboardX
+```
+And then:
+```sh
+tensorboard --logdir=<your-log-dir> --port=<your-port>
 ```
